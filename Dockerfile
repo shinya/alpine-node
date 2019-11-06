@@ -12,4 +12,5 @@ RUN apk add --update --no-cache bash python git make gcc g++ wget build-base lin
 	&& cd ~/ \
 	&& rm -fr /build/node-v8.16.2 /build/node-v8.16.2.tar.gz \
 	&& apk del bash python git make gcc g++ wget build-base linux-headers \
+	&& apk add libstdc++ \
 	&& rm -f /var/cache/apk/*
